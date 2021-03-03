@@ -21,7 +21,8 @@
               "apps/store/src/assets"
             ],
             "styles": [
-              "apps/store/src/styles.scss"
+              "apps/store/src/styles.scss",
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
             ],
             "scripts": []
           },
@@ -117,6 +118,33 @@
             "lintFilePatterns": [
               "apps/store-e2e/**/*.{js,ts}"
             ]
+          }
+        }
+      }
+    },
+    "store-ui-shared": {
+      "projectType": "library",
+      "root": "libs/store/ui-shared",
+      "sourceRoot": "libs/store/ui-shared/src",
+      "prefix": "bg-board",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/store/ui-shared/src/**/*.ts",
+              "libs/store/ui-shared/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/store/ui-shared"
+          ],
+          "options": {
+            "jestConfig": "libs/store/ui-shared/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

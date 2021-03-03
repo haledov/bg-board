@@ -1,3 +1,4 @@
+import { StoreUiSharedModule } from '@bg-board/store/ui-shared';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
@@ -10,6 +11,8 @@ import { RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    StoreUiSharedModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
